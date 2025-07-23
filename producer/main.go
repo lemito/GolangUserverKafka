@@ -24,8 +24,4 @@ func main() {
 		log.Fatalln("Не удалось отправить соо")
 	}
 
-	select {
-	case <-ctx.Done():
-		log.Println("Context  был прерван")
-	}
 }

@@ -11,7 +11,7 @@ func main() {
 	ctx := context.Background()
 
 	writer := kafka.NewWriter(kafka.WriterConfig{
-		Brokers: []string{"localhost:9092"},
+		Brokers: []string{"localhost:29092"},
 		Topic:   "topic-1",
 	})
 	defer writer.Close()
@@ -21,7 +21,7 @@ func main() {
 		Value: []byte("Some message"),
 	})
 	if err != nil {
-		log.Fatalln("Не удалось отправить соо")
+		log.Fatalln("Не удалось отправить соо: ", err)
 	}
 
 }

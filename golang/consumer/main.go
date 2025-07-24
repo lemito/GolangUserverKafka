@@ -11,7 +11,7 @@ import (
 func main() {
 	ctx := context.Background()
 	reader := kafka.NewReader(kafka.ReaderConfig{
-		Brokers: []string{"localhost:9092"}, Topic: "topic-1", GroupID: "groupid-1",
+		Brokers: []string{"localhost:29092"}, Topic: "topic-1", GroupID: "groupid-1",
 	})
 	defer reader.Close()
 
